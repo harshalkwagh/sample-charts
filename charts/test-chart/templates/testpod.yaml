@@ -16,9 +16,9 @@ spec:
     volumeMounts:
       - 
         mountPath: /root/.dkube
-        name: dkube_ini
+        name: dkubeini
   volumes:
     - 
       configMap:
         name: dkube-ini
-      name: dkube_ini
+      name: dkubeini
