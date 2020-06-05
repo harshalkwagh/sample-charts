@@ -15,12 +15,9 @@ questions:
 - variable: required.ha
   default: false
   description: "When HA=true k8s cluster must have min 3 schedulable nodes"
-  type: enum
+  type: boolean
   label: HA
   required: true
-  options:
-    - true
-    - false
   group: "REQUIRED"
 - variable: required.username
   default: ""
@@ -46,7 +43,6 @@ questions:
     - "training"
     - "serving"
   group: "REQUIRED"
-
 - variable: training.serving_cluster_access_endpoint
   default: ""
   description: "Serving cluster access domain or ip address"
@@ -75,7 +71,6 @@ questions:
   label: Serving cluster password
   group: "TRAINING"
   show_if: "required.dkube_cluster=training"
-
 - variable: serving.external_access_static_ip
   default: ""
   description: "External access domain or ip address which is static"
@@ -90,7 +85,6 @@ questions:
   label: Model registry port
   group: "SERVING"
   show_if: "required.dkube_cluster=serving"
-
 - variable: optional.dkube_installer_version
   default: "2.0.7.1"
   description: "Version of dkube installer to be used"
@@ -135,7 +129,6 @@ questions:
   type: password
   label: Dkube images registry password
   group: "OPTIONAL"
-
 - variable: external.access
   default: "nodeport"
   description: "Type of dkube proxy service, possible values are nodeport and loadbalancer"
@@ -149,11 +142,8 @@ questions:
 - variable: external.install_loadbalancer
   default: false
   description: "'true' - to install MetalLB Loadbalancer, Must fill LB VIP IPS if true"
-  type: enum
+  type: boolean
   label: Install MetalLB
-  options:
-    - true
-    - false
   group: "EXTERNAL"
   show_if: "external.access=loadbalancer"
 - variable: external.lb_vip_pool
@@ -163,7 +153,6 @@ questions:
   label: LB VIP Pool
   group: "EXTERNAL"
   show_if: "external.access=loadbalancer&&external.install_loadbalancer=true"
-
 - variable: storage.storage_type
   default: "disk"
   description: "Type of storage. Note: ceph storage type can only be use with HA=true And pv or sc can only be used with HA=false"
@@ -177,7 +166,6 @@ questions:
     - "sc"
   group: "STORAGE"
   required: true
-
 - variable: storage.storage_disk_path
   default: "/var/dkube"
   description: "Path for dkube storage on the disk"
@@ -220,7 +208,6 @@ questions:
   label: NFS path
   group: "STORAGE"
   show_if: "storage.storage_type=nfs"
-
 - variable: storage.storage_ceph_monitors
   default: ""
   description: "Comma separated IPs of ceph monitors"
