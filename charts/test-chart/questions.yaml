@@ -166,20 +166,20 @@ questions:
     - "sc"
   group: "Storage"
   required: true
-# - variable: storage.storage_disk_path
-#   default: "/var/dkube"
-#   description: "Path for dkube storage on the disk"
-#   type: string
-#   label: Dkube storage disk path
-#   group: "Storage"
-#   show_if: "required.ha=false&&storage.storage_type=disk"
-# - variable: storage.storage_disk_node
-#   default: ""
-#   description: "Node name for dkube storage"
-#   type: string
-#   label: Dkube storage disk node
-#   group: "Storage"
-#   show_if: "required.ha=false&&storage.storage_type=disk"
+- variable: storage.storage_disk_path
+  default: "/var/dkube"
+  description: "Path for dkube storage on the disk"
+  type: string
+  label: Dkube storage disk path
+  group: "Storage"
+  show_if: "required.ha=false&&storage.storage_type=disk"
+- variable: storage.storage_disk_node
+  default: ""
+  description: "Node name for dkube storage"
+  type: string
+  label: Dkube storage disk node
+  group: "Storage"
+  show_if: "required.ha=false&&storage.storage_type=disk"
 # - variable: storage.storage_pv
 #   default: ""
 #   description: "Name of persistent volume to be used for storage"
