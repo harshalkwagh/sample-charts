@@ -6,10 +6,19 @@ metadata:
 spec:
   containers:
   - name: test-pod-ctr
-    image: ubuntu:18.04
+    image: ocdr/dkubeadm:2.0.7.1
     command: 
     - bash
     - -c
     - |
       echo "Hello World..."
       sleep 1000000000000000
+    volumeMounts:
+      - 
+        mountPath: /root/.dkube
+        name: dkube_ini
+  volumes:
+    - 
+      configMap:
+        name: dkube-ini
+      name: dkube_ini
