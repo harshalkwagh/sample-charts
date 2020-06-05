@@ -194,20 +194,20 @@ questions:
   label: Storage class
   group: "Storage"
   show_if: "required.ha=false&&storage.storage_type=sc"
-# - variable: storage.storage_nfs_server
-#   default: ""
-#   description: "NFS server ip to be used for storage"
-#   type: string
-#   label: NFS Server
-#   group: "Storage"
-#   show_if: "storage.storage_type=nfs"
-# - variable: storage.storage_nfs_path
-#   default: ""
-#   description: "NFS path (Make sure the path exists)"
-#   type: string
-#   label: NFS path
-#   group: "Storage"
-#   show_if: "storage.storage_type=nfs"
+- variable: storage.storage_nfs_server
+  default: ""
+  description: "NFS server ip to be used for storage"
+  type: string
+  label: NFS Server
+  group: "Storage"
+  show_if: "storage.storage_type=nfs"
+- variable: storage.storage_nfs_path
+  default: ""
+  description: "NFS path (Make sure the path exists)"
+  type: string
+  label: NFS path
+  group: "Storage"
+  show_if: "storage.storage_type=nfs"
 # - variable: storage.storage_ceph_monitors
 #   default: ""
 #   description: "Comma separated IPs of ceph monitors"
