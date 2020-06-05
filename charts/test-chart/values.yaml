@@ -96,7 +96,7 @@ serving:
   # External access domain or ip address which is static
   external_access_static_ip: ""
   # Hardcoded port for now - this needs to be allowed by firewalls
-  model_registry_port: ""
+  model_registry_port: "30002"
 
 optional:
   # version of dkube installer to be used
