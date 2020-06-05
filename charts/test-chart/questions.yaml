@@ -85,50 +85,50 @@ questions:
   label: Model registry port
   group: "Serving"
   show_if: "required.dkube_cluster=serving"
-# - variable: optional.dkube_installer_version
-#   default: "2.0.7.1"
-#   description: "Version of dkube installer to be used"
-#   type: string
-#   label: Dkube installer version
-#   required: true
-#   group: "Optional"
-# - variable: optional.dkube_version
-#   default: "2.0.7.1"
-#   description: "Version of dkube to be installed"
-#   type: string
-#   label: Dkube version
-#   required: true
-#   group: "Optional"
-# - variable: optional.dkube_dockerhub_credentials_secret
-#   default: "dkube-dockerhub-secret"
-#   description: "Dockerhub Secrets for "ocdr/" images. If you don't create, this will be auto-created with default values."
-#   type: string
-#   label: Dkube dockerhub secret name
-#   group: "Optional"
-# - variable: optional.dkube_operator_certificate
-#   default: ""
-#   description: "TLS Secret of Operator's Certificate & Private Key. If you don't create, place your certificate and private key in $HOME/.dkube"
-#   type: string
-#   label: Dkube operator certificate secret
-#   group: "Optional"
-# - variable: optional.dkube_registry
-#   default: "docker.io/ocdr"
-#   description: "Repository from where Dkube images can be picked. Format: registry/[repo]"
-#   type: string
-#   label: Dkube images registry
-#   group: "Optional"
-# - variable: optional.registry_uname
-#   default: ""
-#   description: "Images registry username"
-#   type: string
-#   label: Dkube images registry username
-#   group: "Optional"
-# - variable: optional.registry_passwd
-#   default: ""
-#   description: "Images registry password"
-#   type: password
-#   label: Dkube images registry password
-#   group: "Optional"
+- variable: optional.dkube_installer_version
+  default: "2.0.7.1"
+  description: "Version of dkube installer to be used"
+  type: string
+  label: Dkube installer version
+  required: true
+  group: "Optional"
+- variable: optional.dkube_version
+  default: "2.0.7.1"
+  description: "Version of dkube to be installed"
+  type: string
+  label: Dkube version
+  required: true
+  group: "Optional"
+- variable: optional.dkube_dockerhub_credentials_secret
+  default: "dkube-dockerhub-secret"
+  description: "Dockerhub Secrets for "ocdr/" images. If you don't create, this will be auto-created with default values."
+  type: string
+  label: Dkube dockerhub secret name
+  group: "Optional"
+- variable: optional.dkube_operator_certificate
+  default: ""
+  description: "TLS Secret of Operator's Certificate & Private Key. If you don't create, place your certificate and private key in $HOME/.dkube"
+  type: string
+  label: Dkube operator certificate secret
+  group: "Optional"
+- variable: optional.dkube_registry
+  default: "docker.io/ocdr"
+  description: "Repository from where Dkube images can be picked. Format: registry/[repo]"
+  type: string
+  label: Dkube images registry
+  group: "Optional"
+- variable: optional.registry_uname
+  default: ""
+  description: "Images registry username"
+  type: string
+  label: Dkube images registry username
+  group: "Optional"
+- variable: optional.registry_passwd
+  default: ""
+  description: "Images registry password"
+  type: password
+  label: Dkube images registry password
+  group: "Optional"
 # - variable: external.access
 #   default: "nodeport"
 #   description: "Type of dkube proxy service, possible values are nodeport and loadbalancer"
