@@ -225,7 +225,7 @@ questions:
 - variable: storage.storage_ceph_path
   default: "/var/lib/rook"
   # description: "Ceph data and configuration path for internal ceph, Internal ceph is installed when HA=true and Storage type is not in ("nfs", "ceph")"
-  description: "Ceph data and configuration path for internal ceph"
+  description: "Ceph data and configuration path for internal ceph. Internal ceph is installed when HA=true and Storage type is not equal to nfs or ceph"
   type: string
   label: Ceph storage path
   group: "Storage"
