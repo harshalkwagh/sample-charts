@@ -1,7 +1,3 @@
-categories:
-- dkube
-labels:
-  app: test-chart
 questions:
 - variable: required.kube_provider
   default: ""
