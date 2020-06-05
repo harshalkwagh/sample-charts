@@ -111,24 +111,24 @@ questions:
   type: string
   label: Dkube operator certificate secret
   group: "Optional"
-- variable: optional.dkube_registry
-  default: "docker.io/ocdr"
-  description: "Repository from where Dkube images can be picked. Format: registry/[repo]"
-  type: string
-  label: Dkube images registry
-  group: "Optional"
-- variable: optional.registry_uname
-  default: ""
-  description: "Images registry username"
-  type: string
-  label: Dkube images registry username
-  group: "Optional"
-- variable: optional.registry_passwd
-  default: ""
-  description: "Images registry password"
-  type: password
-  label: Dkube images registry password
-  group: "Optional"
+# - variable: optional.dkube_registry
+#   default: "docker.io/ocdr"
+#   description: "Repository from where Dkube images can be picked. Format: registry/[repo]"
+#   type: string
+#   label: Dkube images registry
+#   group: "Optional"
+# - variable: optional.registry_uname
+#   default: ""
+#   description: "Images registry username"
+#   type: string
+#   label: Dkube images registry username
+#   group: "Optional"
+# - variable: optional.registry_passwd
+#   default: ""
+#   description: "Images registry password"
+#   type: password
+#   label: Dkube images registry password
+#   group: "Optional"
 # - variable: external.access
 #   default: "nodeport"
 #   description: "Type of dkube proxy service, possible values are nodeport and loadbalancer"
