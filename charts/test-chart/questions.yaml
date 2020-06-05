@@ -180,20 +180,20 @@ questions:
   label: Dkube storage disk node
   group: "Storage"
   show_if: "required.ha=false&&storage.storage_type=disk"
-# - variable: storage.storage_pv
-#   default: ""
-#   description: "Name of persistent volume to be used for storage"
-#   type: string
-#   label: Storage PV
-#   group: "Storage"
-#   show_if: "required.ha=false&&storage.storage_type=pv"
-# - variable: storage.storage_sc
-#   default: ""
-#   description: "Name of storage class to be used for storage. Make sure dynamic provisioner is running for the storage class name"
-#   type: string
-#   label: Storage class
-#   group: "Storage"
-#   show_if: "required.ha=false&&storage.storage_type=sc"
+- variable: storage.storage_pv
+  default: ""
+  description: "Name of persistent volume to be used for storage"
+  type: string
+  label: Storage PV
+  group: "Storage"
+  show_if: "required.ha=false&&storage.storage_type=pv"
+- variable: storage.storage_sc
+  default: ""
+  description: "Name of storage class to be used for storage. Make sure dynamic provisioner is running for the storage class name"
+  type: string
+  label: Storage class
+  group: "Storage"
+  show_if: "required.ha=false&&storage.storage_type=sc"
 # - variable: storage.storage_nfs_server
 #   default: ""
 #   description: "NFS server ip to be used for storage"
