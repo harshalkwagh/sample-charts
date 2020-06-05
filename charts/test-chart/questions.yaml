@@ -129,30 +129,30 @@ questions:
   type: password
   label: Dkube images registry password
   group: "Optional"
-# - variable: external.access
-#   default: "nodeport"
-#   description: "Type of dkube proxy service, possible values are nodeport and loadbalancer"
-#   type: enum
-#   label: Dkube access type
-#   required: true
-#   options:
-#     - "nodeport"
-#     - "loadbalancer"
-#   group: "External"
-# - variable: external.install_loadbalancer
-#   default: false
-#   description: "'true' - to install MetalLB Loadbalancer, Must fill LB VIP IPS if true"
-#   type: boolean
-#   label: Install MetalLB
-#   group: "External"
-#   show_if: "external.access=loadbalancer"
-# - variable: external.lb_vip_pool
-#   default: ""
-#   description: "Valid only if Install MetalLB=true, Only CIDR notation is allowed. E.g: 192.168.2.0/24. "
-#   type: string
-#   label: LB VIP Pool
-#   group: "External"
-#   show_if: "external.access=loadbalancer&&external.install_loadbalancer=true"
+- variable: external.access
+  default: "nodeport"
+  description: "Type of dkube proxy service, possible values are nodeport and loadbalancer"
+  type: enum
+  label: Dkube access type
+  required: true
+  options:
+    - "nodeport"
+    - "loadbalancer"
+  group: "External"
+- variable: external.install_loadbalancer
+  default: false
+  description: "'true' - to install MetalLB Loadbalancer, Must fill LB VIP IPS if true"
+  type: boolean
+  label: Install MetalLB
+  group: "External"
+  show_if: "external.access=loadbalancer"
+- variable: external.lb_vip_pool
+  default: ""
+  description: "Valid only if Install MetalLB=true, Only CIDR notation is allowed. E.g: 192.168.2.0/24. "
+  type: string
+  label: LB VIP Pool
+  group: "External"
+  show_if: "external.access=loadbalancer&&external.install_loadbalancer=true"
 # - variable: storage.storage_type
 #   default: "disk"
 #   description: "Type of storage. Note: ceph storage type can only be use with HA=true And pv or sc can only be used with HA=false"
