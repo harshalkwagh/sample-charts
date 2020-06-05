@@ -208,24 +208,24 @@ questions:
   label: NFS path
   group: "Storage"
   show_if: "storage.storage_type=nfs"
-# - variable: storage.storage_ceph_monitors
-#   default: ""
-#   description: "Comma separated IPs of ceph monitors"
-#   type: string
-#   label: Ceph monitors
-#   group: "Storage"
-#   show_if: "storage.storage_type=ceph"
-# - variable: storage.storage_ceph_secret
-#   default: ""
-#   description: "Ceph secret"
-#   type: string
-#   label: Ceph Secret
-#   group: "Storage"
-#   show_if: "storage.storage_type=ceph"
-# - variable: storage.storage_ceph_path
-#   default: "/var/lib/rook"
-#   description: "Ceph data and configuration path for internal ceph, Internal ceph is installed when HA=true and Storage type is not in ("nfs", "ceph")"
-#   type: string
-#   label: Ceph storage path
-#   group: "Storage"
-#   show_if: "required.ha=true&&storage.storage_type!=ceph&&storage.storage_type!=nfs"
+- variable: storage.storage_ceph_monitors
+  default: ""
+  description: "Comma separated IPs of ceph monitors"
+  type: string
+  label: Ceph monitors
+  group: "Storage"
+  show_if: "storage.storage_type=ceph"
+- variable: storage.storage_ceph_secret
+  default: ""
+  description: "Ceph secret"
+  type: string
+  label: Ceph Secret
+  group: "Storage"
+  show_if: "storage.storage_type=ceph"
+- variable: storage.storage_ceph_path
+  default: "/var/lib/rook"
+  description: "Ceph data and configuration path for internal ceph, Internal ceph is installed when HA=true and Storage type is not in ("nfs", "ceph")"
+  type: string
+  label: Ceph storage path
+  group: "Storage"
+  show_if: "required.ha=true&&storage.storage_type!=ceph&&storage.storage_type!=nfs"
