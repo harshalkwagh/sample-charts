@@ -99,13 +99,12 @@ questions:
   label: Dkube version
   required: true
   group: "Optional"
-- variable: optional.dkube_dockerhub_credentials_secret
-  # default: "dkube-dockerhub-secret"
-  default: ""
-  description: "Dockerhub Secrets for "ocdr/" images. If you don't create, this will be auto-created with default values."
-  type: string
-  label: Dkube dockerhub secret name
-  group: "Optional"
+# - variable: optional.dkube_dockerhub_credentials_secret
+#   default: "dkube-dockerhub-secret"
+#   description: "Dockerhub Secrets for "ocdr/" images. If you don't create, this will be auto-created with default values."
+#   type: string
+#   label: Dkube dockerhub secret name
+#   group: "Optional"
 - variable: optional.dkube_operator_certificate
   default: ""
   description: "TLS Secret of Operator's Certificate & Private Key. If you don't create, place your certificate and private key in $HOME/.dkube"
@@ -223,10 +222,11 @@ questions:
   label: Ceph Secret
   group: "Storage"
   show_if: "storage.storage_type=ceph"
-# - variable: storage.storage_ceph_path
-#   default: "/var/lib/rook"
-#   description: "Ceph data and configuration path for internal ceph, Internal ceph is installed when HA=true and Storage type is not in ("nfs", "ceph")"
-#   type: string
-#   label: Ceph storage path
-#   group: "Storage"
-#   show_if: "required.ha=true&&storage.storage_type!=ceph&&storage.storage_type!=nfs"
+- variable: storage.storage_ceph_path
+  default: "/var/lib/rook"
+  # description: "Ceph data and configuration path for internal ceph, Internal ceph is installed when HA=true and Storage type is not in ("nfs", "ceph")"
+  description: "Ceph data and configuration path for internal ceph"
+  type: string
+  label: Ceph storage path
+  group: "Storage"
+  show_if: "required.ha=true&&storage.storage_type!=ceph&&storage.storage_type!=nfs"
