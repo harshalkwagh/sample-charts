@@ -1,2 +1,2 @@
-#test-chart
-This is my first rancher catalog
+#dkube-installer
+This is demo rancher catalog for dkube-installer
