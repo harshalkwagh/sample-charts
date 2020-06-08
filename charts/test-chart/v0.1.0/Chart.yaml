@@ -3,3 +3,4 @@ appVersion: "1.0"
 description: A Helm chart for Kubernetes
 name: test-chart
 version: 0.1.0
+icon: https://raw.githubusercontent.com/harshalkwagh/sample-charts/dkube-installer/charts/test-chart/catalogIcon-dkube.jpg
