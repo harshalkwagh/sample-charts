@@ -193,7 +193,7 @@ questions:
   type: string
   label: Dkube storage disk path
   group: "Dkube"
-  show_if: "required.ha=false&&storage.storage_type=disk"
+  show_if: "eula=true&&required.ha=false&&storage.storage_type=disk"
 - variable: storage.storage_disk_node
   default: ""
   description: "Node name for dkube storage"
