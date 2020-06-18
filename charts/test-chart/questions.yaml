@@ -1,0 +1,10 @@
+categories:
+- repository
+labels:
+  app: test-chart
+questions:
+- variable: username
+  default: ""
+  description: "User name for this application"
+  label: Username
+  type: string
