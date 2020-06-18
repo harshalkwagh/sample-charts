@@ -1,11 +1,4 @@
 questions:
-- variable: eula
-  default: false
-  description: "www.oneconvergence.com/EULA/One-Convergence-EULA.pdf . By accepting this license agreement you acknowledge that you have read and understood the terms and conditions mentioned."
-  type: boolean
-  label: DKUBE-EULA
-  required: true
-  group: "Dkube"
 - variable: opration
   default: ""
   description: "Choose one of install/uninstall"
@@ -16,7 +9,13 @@ questions:
     - "uninstall"
   group: "Dkube"
   required: true
-  show_if: "eula=true"
+- variable: eula
+  default: false
+  description: "www.oneconvergence.com/EULA/One-Convergence-EULA.pdf . By accepting this license agreement you acknowledge that you have read and understood the terms and conditions mentioned."
+  type: boolean
+  label: DKUBE-EULA
+  required: true
+  group: "Dkube"
 - variable: required.kube_provider
   default: ""
   description: "Kubernetes provider: Choose one of dkube/gke/okd/eks/ntnx"
