@@ -2,7 +2,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: dkubeadm
+  name: dkubeadm-{{ required "Please fill up the correct value for operation !!" .Values.opration }}
   namespace: {{ .Release.Namespace }}
 spec:
   template:
