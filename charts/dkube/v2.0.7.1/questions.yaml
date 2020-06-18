@@ -6,6 +6,17 @@ questions:
   label: DKUBE-EULA
   required: true
   group: "Dkube"
+- variable: opration
+  default: ""
+  description: "Choose one of install/uninstall"
+  type: enum
+  label: Operation
+  options:
+    - "install"
+    - "uninstall"
+  group: "Dkube"
+  required: true
+  show_if: "eula=true"
 - variable: required.kube_provider
   default: ""
   description: "Kubernetes provider: Choose one of dkube/gke/okd/eks/ntnx"

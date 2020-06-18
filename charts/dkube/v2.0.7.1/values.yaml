@@ -3,7 +3,7 @@
 # # Declare variables to be passed into your templates.
 
 # Operation to be performed, Choose one of "install", "uninstall"
-opration: "install"
+opration: ""
 # Version of dkubeadm to be used, use same version as dkube version is recommended.
 dkubeadm_version: "2.0.7.1-job"
 #dkube.ini - Configuration for dkubei installation

@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: dkube-ini
-  namespace: dkube-infra
+  namespace: {{ .Release.Namespace }}
 data:
   dkube.ini: |
     #################################################################
