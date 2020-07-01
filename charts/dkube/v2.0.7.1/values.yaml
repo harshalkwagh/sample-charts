@@ -5,7 +5,7 @@
 # Operation to be performed, Choose one of "install", "uninstall"
 opration: ""
 # Version of dkubeadm to be used, use same version as dkube version is recommended.
-dkubeadm_version: "2.0.7.1-job"
+dkubeadm_version: "2.1.0-cicd"
 #dkube.ini - Configuration for dkubei installation
 required:
   # Choose one of dkube/gke/okd/eks/ntnx
@@ -39,9 +39,9 @@ serving:
 
 optional:
   # version of dkube installer to be used
-  dkube_installer_version: "2.0.7.1"
+  dkube_installer_version: "2.1.0"
   # version of dkube to be installed
-  dkube_version: "2.0.7.1"
+  dkube_version: "2.1.0"
   # Dockerhub Secrets for OCDR images
   # If you don't create, this will be auto-created with default values.
   dkube_dockerhub_credentials_secret: "dkube-dockerhub-secret"
